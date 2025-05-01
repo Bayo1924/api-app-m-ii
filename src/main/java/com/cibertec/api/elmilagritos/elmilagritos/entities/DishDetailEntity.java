@@ -1,19 +1,7 @@
 package com.cibertec.api.elmilagritos.elmilagritos.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
-
-@Entity
-@Table(name="dish_detail")
 public class DishDetailEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String ingrediente1;
     private String ingrediente2;
@@ -21,12 +9,21 @@ public class DishDetailEntity {
     private String ingrediente4;
     private String ingrediente5;
 
-    @OneToOne
-    @JoinColumn(name = "dish_id")
     private DishEntity dish;
 
     public DishDetailEntity() {
     }
+
+    public DishDetailEntity(DishEntity dish, Long id, String ingrediente1, String ingrediente2, String ingrediente3, String ingrediente4, String ingrediente5) {
+        this.dish = dish;
+        this.id = id;
+        this.ingrediente1 = ingrediente1;
+        this.ingrediente2 = ingrediente2;
+        this.ingrediente3 = ingrediente3;
+        this.ingrediente4 = ingrediente4;
+        this.ingrediente5 = ingrediente5;
+    }
+
     public Long getId() {
         return id;
     }

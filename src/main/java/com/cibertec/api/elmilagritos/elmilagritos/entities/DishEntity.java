@@ -1,17 +1,7 @@
 package com.cibertec.api.elmilagritos.elmilagritos.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-
-@Entity
-@Table(name="dish")
 public class DishEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String urlImage;
     private String name;
@@ -19,7 +9,15 @@ public class DishEntity {
     private Double price;
 
     public DishEntity(){}
-    
+
+    public DishEntity(String description, Long id, String name, Double price, String urlImage) {
+        this.description = description;
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.urlImage = urlImage;
+    }
+
     public Long getId() {
         return id;
     }
@@ -44,11 +42,9 @@ public class DishEntity {
     public void setDescription(String description) {
         this.description = description;
     }
-
     public Double getPrice() {
         return price;
     }
-
     public void setPrice(Double price) {
         this.price = price;
     }
