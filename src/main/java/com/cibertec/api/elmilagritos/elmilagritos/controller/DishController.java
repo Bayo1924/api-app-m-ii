@@ -18,8 +18,10 @@ import java.util.List;
 public class DishController {
 
     private final List<DishEntity> dishes = Arrays.asList(
-            new DishEntity("Pizza italiana con masa artesanal y pepperoni", 1L, "Pizza Pepperoni", 25.0, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaquEjE8P3KdWLYIJ7VitqNYphEYOt8t0mag&s"),
-            new DishEntity("Hamburguesa doble con queso cheddar y papas", 2L, "Hamburguesa Doble", 18.5, "https://www.recetasnestle.com.ec/sites/default/files/srh_recipes/4e4293857c03d819e4ae51de1e86d66a.jpg")
+            new DishEntity("Pizza italiana con masa artesanal y pepperoni", 1L, "Pizza Pepperoni", 25.0, "https://www.sortirambnens.com/wp-content/uploads/2019/02/pizza-de-peperoni.jpg"),
+            new DishEntity("Hamburguesa doble con queso cheddar y papas", 2L, "Hamburguesa Doble", 18.5, "https://www.recetasnestle.com.ec/sites/default/files/srh_recipes/4e4293857c03d819e4ae51de1e86d66a.jpg"),
+            new DishEntity("Pollo a la brasa", 3L, "Rico pollo a la brasa", 20.5, "https://buenazo.cronosmedia.glr.pe/original/2023/07/14/64ac3e8c599470217672a906.jpg"),
+            new DishEntity("Pollo al horno", 4L, "Rico pollo al horno", 20.5, "https://www.recetasnestle.com.pe/sites/default/files/srh_recipes/6b9aa49f5d86110b6cf03136f4aa6d3f.jpg")
     );
 
     private final List<DishDetailEntity> dishDetails = Arrays.asList(
